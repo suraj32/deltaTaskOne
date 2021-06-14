@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Delta-Task-I</title>
+        <link href="style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" href="Untitled.png" type="image/icon type">
+    </head>
+    <body>
+        <audio loop="true" autoplay="autoplay" src="Piano-Concerto.mp3">
+        </audio>
+        <header id="header"><h1><u>🎨MATCHING TILES🎨</u></h1>
+        </header>
+        <div>
+            <h4>Instructions:</h4>
+            <p>Highlighted inner table in 6x6 table should match with below 4x4 table
+            <p>Use 'Arrow Keys' or 'WASD' to move the tiles
+            <hr>
+            <button class="btn" onclick="reset()"><i class="fa fa-refresh"></i> reset</button>  
+            <a href="index.html"><button class="btn">Easy mode</button><br></a>
+            <p id="count2">Moves count = 0</p>
+            <p id="timer2">⏰ 0:0:0</img></p>
+            <div id="modal">
+                <p>🤩🔥</p>
+                <p style="font-size: 20px;color: goldenrod">Hurray!! You won</p>
+                <p id="highscore" style="font-size: 20px;color: rgb(24, 141, 20)"></p>
+                <p style="font-size: 15px;color: rgb(24, 141, 20)">Play again ?</p>
+                <a href="index.html"><button class="mode">Easy mode</button><br></a>
+                <button class="mode" onclick="replay()">Normal mode</button>
+            </div>
+            <div class="grid-container1">
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>  
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>  
+                <div class="grid-item"></div>
+                <div id="inner2" class="grid-item"></div>
+                <div id="inner2" class="grid-item"></div>
+                <div id="inner2" class="grid-item"></div>
+                <div id="inner2" class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div id="inner2" class="grid-item"></div>
+                <div id="inner2" class="grid-item"></div>
+                <div id="inner2" class="grid-item"></div>
+                <div id="inner2" class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div id="inner2" class="grid-item"></div>
+                <div id="inner2" class="grid-item"></div>
+                <div id="inner2" class="grid-item"></div>
+                <div id="inner2" class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div id="inner2" class="grid-item"></div>
+                <div id="inner2" class="grid-item"></div>
+                <div id="inner2" class="grid-item"></div>
+                <div id="inner2" class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+            </div><br>
+            <div class="grid-container2">
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+            </div>
+        </div>
+        <footer><img id="name-img" src="Untitled.png" alt="logo_myname">'s website</footer>
+        <script src="script2.js"></script>
+    </body>
+</html>
