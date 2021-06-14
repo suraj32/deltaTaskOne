@@ -172,20 +172,19 @@ function check2(){
     }
 }
 //5
-let score=Math.floor(100/count1 + 1000/(3600*hr + 60*min + sec));
-let score = count1;
+let score=Math.floor(1000/count1 + 1000/(3600*hr + 60*min + sec));
 let hiscore= document.getElementById("highscore");
-if(localStorage.getItem("big") == null){
-    localStorage.setItem("big",score);
+if(localStorage.getItem("big2") == null){
+    localStorage.setItem("big2",score);
     console.log('hi1');
-    hiscore.innerText = "⚡High Score:" + localStorage.getItem("big");
+    hiscore.innerText = "⚡High Score:" + localStorage.getItem("big2");
 }
 else if(score > localStorage.getItem("big")){
-    localStorage.setItem("hiscore",score)
+    localStorage.setItem("big2",score);
     console.log('hi2');
-    hiscore.innerText ="⚡High Score:" +  localStorage.getItem("big");
+    hiscore.innerText ="⚡High Score:" +  localStorage.getItem("big2");
 }
 else{
     console.log('hi3');
-    hiscore.innerText ="⚡High Score:" +  localStorage.getItem("big");
+    hiscore.innerText ="⚡High Score:" +  localStorage.getItem("big2");
 }
