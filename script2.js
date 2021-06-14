@@ -84,6 +84,10 @@ function swap(){
     console.log(grid[m].style.backgroundColor+","+grid[n].style.backgroundColor);
     grid[m].style.backgroundColor=grid[n].style.backgroundColor;
     grid[n].style.backgroundColor= null;
+    count2++;
+    document.getElementById("count2").textContent="Moves count = "+count2;
+    if(count2===1){interval = window.setInterval(timer2,1000);}
+    check2();
     m=n;
 }
 m=35,n=0;
@@ -171,7 +175,7 @@ function check2(){
         
     }
 }
-//5
+//5 high score is not working though everything seems perfect for me.
 let score=Math.floor(1000/count1 + 1000/(3600*hr + 60*min + sec));
 let hiscore= document.getElementById("highscore");
 if(localStorage.getItem("big2") == null){
