@@ -137,7 +137,6 @@ document.body.addEventListener('keydown', function(event)
 var modal=document.getElementById("modal");
 function check(){
 if(tdGroup[25].style.backgroundColor===tdGroup[6].style.backgroundColor){
-    modal.style.display="block";
     if(tdGroup[26].style.backgroundColor===tdGroup[7].style.backgroundColor){
         if(tdGroup[27].style.backgroundColor===tdGroup[8].style.backgroundColor){
             if(tdGroup[28].style.backgroundColor===tdGroup[11].style.backgroundColor){
@@ -160,8 +159,7 @@ if(tdGroup[25].style.backgroundColor===tdGroup[6].style.backgroundColor){
 }
 }
 //5
-let score=Math.floor(100/count1 + 1000/(3600*hr + 60*min + sec));
-let score = count1;
+let score=Math.floor(1000/count1 + 1000/(3600*hr + 60*min + sec));
 let hiscore= document.getElementById("highscore");
 if(localStorage.getItem("big") == null){
     localStorage.setItem("big",score);
@@ -169,7 +167,7 @@ if(localStorage.getItem("big") == null){
     hiscore.innerText = "⚡High Score:" + localStorage.getItem("big");
 }
 else if(score > localStorage.getItem("big")){
-    localStorage.setItem("hiscore",score)
+    localStorage.setItem("big",score)
     console.log('hi2');
     hiscore.innerText ="⚡High Score:" +  localStorage.getItem("big");
 }
