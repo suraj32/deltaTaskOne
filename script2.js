@@ -163,6 +163,7 @@ function check2(){
                                     tada();
                                     modal.style.display="block";
                                     window.clearInterval(interval);
+                                    displayScore();
                                 }
                                 
                             }
