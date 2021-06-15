@@ -79,17 +79,20 @@ for(i=36;i<52;i++){
     --m;
 }
 //3
-function swap(){
+let count2=0;
+m=35;
+function shift(s,t){
     console.log(m+","+n);
-    //console.log(grid[m].style.backgroundColor+","+grid[n].style.backgroundColor);
+    console.log(s+","+t);
+    console.log(grid[s].style.backgroundColor+","+grid[t].style.backgroundColor);
+    grid[s].style.backgroundColor=grid[t].style.backgroundColor;
+    grid[t].style.backgroundColor = "white";
     count2++;
     document.getElementById("count2").textContent="Moves count = "+count2;
     if(count2===1){interval = window.setInterval(timer2,1000);}
     check2();
-    m=n;
+    return t;
 }
-m=35,n=0;
-let count2=0;
 document.body.addEventListener('keydown', function(event)
 {
     moveSound();
@@ -98,22 +101,22 @@ document.body.addEventListener('keydown', function(event)
         case "ArrowLeft": case "a": case "A":
             n=m+1;
             if(!(n%6)){beep();}
-            else { swap(); }
+            else { m=shift(m,n); }
             break;
         case "ArrowRight": case "d": case "D":
             n=m-1;
             if(!(m%6)){beep();}
-            else { swap(); }
+            else { m=shift(m,n); }
             break;
         case "ArrowUp": case "w": case "W":
             n=m+6;
             if(n>35){beep();}
-            else { swap(); }
+            else { m=shift(m,n); }
             break;
         case "ArrowDown": case "s": case "S":
             n=m-6;
             if(n<0){beep();}
-            else { swap(); }
+            else { m=shift(m,n); }
             break;
         }
 });
