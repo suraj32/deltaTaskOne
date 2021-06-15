@@ -81,9 +81,7 @@ for(i=36;i<52;i++){
 //3
 function swap(){
     console.log(m+","+n);
-    console.log(grid[m].style.backgroundColor+","+grid[n].style.backgroundColor);
-    grid[m].style.backgroundColor=grid[n].style.backgroundColor;
-    grid[n].style.backgroundColor= null;
+    //console.log(grid[m].style.backgroundColor+","+grid[n].style.backgroundColor);
     count2++;
     document.getElementById("count2").textContent="Moves count = "+count2;
     if(count2===1){interval = window.setInterval(timer2,1000);}
