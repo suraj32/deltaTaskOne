@@ -136,41 +136,46 @@ function timer2(){
 //5
 function check2(){
     n=1;
-    for(i=36,j=7;i<40,j<11;i++,j++){
-        if(!(grid[i].style.backgroundColor===grid[j].style.backgroundColor)){
-            n*=-1;
-            break;
+    if(1){
+        for(i=36,j=7;i<40,j<11;i++,j++){
+            if(!(grid[i].style.backgroundColor===grid[j].style.backgroundColor)){
+                n*=-1;
+                break;
+            }
         }
     }
-    if(n!==-1){
-        for(i=40,j=13;i<44,j<17;i++,j++){
+    else{if(n!==-1){
+            for(i=40,j=13;i<44,j<17;i++,j++){
                 if(!(grid[i].style.backgroundColor===grid[j].style.backgroundColor)){
                     n*=-1;
                     break;
                 }
-        }
-    }
-    if(n!==-1){
-        for(i=44,j=19;i<48,j<23;i++,j++){
-            if(!(grid[i].style.backgroundColor===grid[j].style.backgroundColor)){
-                n*=-1;
-                break;
             }
         }
+         else{if(n!==-1){
+                for(i=44,j=19;i<48,j<23;i++,j++){
+                    if(!(grid[i].style.backgroundColor===grid[j].style.backgroundColor)){
+                    n*=-1;
+                    break;
+                    }
+                }
+             }
+              else{ if(n!==-1){
+                        for(i=48,j=25;i<52,j<29;i++,j++){
+                            if(!(grid[i].style.backgroundColor===grid[j].style.backgroundColor)){
+                                n*=-1;
+                                break;
+                                }
+                            }
+                         }
+                   else if(n!==1){
+                            tada();
+                            modal.style.display="block";
+                            window.clearInterval(interval);
+                            displayScore();
     }
-    if(n!==-1){
-        for(i=48,j=25;i<52,j<29;i++,j++){
-            if(!(grid[i].style.backgroundColor===grid[j].style.backgroundColor)){
-                n*=-1;
-                break;
-            }
-        }
     }
-    if(n!==1){
-        tada();
-        modal.style.display="block";
-        window.clearInterval(interval);
-        displayScore();
+    }
     }
 }
 
