@@ -134,49 +134,57 @@ function timer2(){
 }
 
 //5
-function check2(){
-    n=1;
-    if(1){
-        for(i=36,j=7;i<40,j<11;i++,j++){
-            if(!(grid[i].style.backgroundColor===grid[j].style.backgroundColor)){
-                n*=-1;
-                break;
-            }
-        }
+function check2( ){    
+for ( i = 0; i < 16; i++) {
+    ti = 36 + i
+    si = (7+i) + (2 * Math.floor(i/4))
+    if(!(grid[ti].style.backgroundColor===grid[si].style.backgroundColor)){
+        n*=-1;
+        break;
     }
-    else{if(n!==-1){
-            for(i=40,j=13;i<44,j<17;i++,j++){
-                if(!(grid[i].style.backgroundColor===grid[j].style.backgroundColor)){
-                    n*=-1;
-                    break;
-                }
-            }
-        }
-         else{if(n!==-1){
-                for(i=44,j=19;i<48,j<23;i++,j++){
-                    if(!(grid[i].style.backgroundColor===grid[j].style.backgroundColor)){
-                    n*=-1;
-                    break;
-                    }
-                }
-             }
-              else{ if(n!==-1){
-                        for(i=48,j=25;i<52,j<29;i++,j++){
-                            if(!(grid[i].style.backgroundColor===grid[j].style.backgroundColor)){
-                                n*=-1;
-                                break;
-                                }
-                            }
-                         }
-                   else if(n!==1){
-                            tada();
-                            modal.style.display="block";
-                            window.clearInterval(interval);
-                            displayScore();
-    }
-    }
-    }
-    }
+}
+
+    // if(1){
+    //     for(i=36,j=7;i<40,j<11;i++,j++){
+    //         if(!(grid[i].style.backgroundColor===grid[j].style.backgroundColor)){
+    //             n*=-1;
+    //             break;
+    //         }
+    //     }
+    // }
+    // else{if(n!==-1){
+    //         for(i=40,j=13;i<44,j<17;i++,j++){
+    //             if(!(grid[i].style.backgroundColor===grid[j].style.backgroundColor)){
+    //                 n*=-1;
+    //                 break;
+    //             }
+    //         }
+    //     }
+    //      else{if(n!==-1){
+    //             for(i=44,j=19;i<48,j<23;i++,j++){
+    //                 if(!(grid[i].style.backgroundColor===grid[j].style.backgroundColor)){
+    //                 n*=-1;
+    //                 break;
+    //                 }
+    //             }
+    //          }
+    //           else{ if(n!==-1){
+    //                     for(i=48,j=25;i<52,j<29;i++,j++){
+    //                         if(!(grid[i].style.backgroundColor===grid[j].style.backgroundColor)){
+    //                             n*=-1;
+    //                             break;
+    //                             }
+    //                         }
+    //                      }
+    //                else if(n!==1){
+    //                         tada();
+    //                         modal.style.display="block";
+    //                         window.clearInterval(interval);
+    //                         displayScore();
+    // }
+    // }
+    // }
+    // }
 }
 
  //6
