@@ -139,44 +139,42 @@ function check2(){
     for(i=36,j=7;i<40,j<11;i++,j++){
         if(!(grid[i].style.backgroundColor===grid[j].style.backgroundColor)){
             n*=-1;
+            break;
         }
-        if(n===-1){ break; }
-        else {
-            for(i=40,j=13;i<44,j<17;i++,j++){
+    }
+    if(n!==-1){
+        for(i=40,j=13;i<44,j<17;i++,j++){
                 if(!(grid[i].style.backgroundColor===grid[j].style.backgroundColor)){
                     n*=-1;
+                    break;
                 }
-                if(n===-1){ break; }
-                else {
-                    for(i=44,j=19;i<48,j<23;i++,j++){
-                        if(!(grid[i].style.backgroundColor===grid[j].style.backgroundColor)){
-                            n*=-1;
-                        }
-                        if(n===-1){ break; }
-                        else {
-                            for(i=48,j=25;i<52,j<29;i++,j++){
-                                if(!(grid[i].style.backgroundColor===grid[j].style.backgroundColor)){
-                                    n*=-1;
-                                }
-                                if(n===-1){ break; }
-                                else {
-                                    tada();
-                                    modal.style.display="block";
-                                    window.clearInterval(interval);
-                                    displayScore();
-                                }
-                                
-                            }
-                        }
-                        
-                    }
-                }
-                
+        }
+    }
+    if(n!==-1){
+        for(i=44,j=19;i<48,j<23;i++,j++){
+            if(!(grid[i].style.backgroundColor===grid[j].style.backgroundColor)){
+                n*=-1;
+                break;
             }
         }
-        
+    }
+    if(n!==-1){
+        for(i=48,j=25;i<52,j<29;i++,j++){
+            if(!(grid[i].style.backgroundColor===grid[j].style.backgroundColor)){
+                n*=-1;
+                break;
+            }
+        }
+    }
+    if(n!==1){
+        tada();
+        modal.style.display="block";
+        window.clearInterval(interval);
+        displayScore();
     }
 }
+
+ //6
 function displayScore(){
 let score=Math.floor(1000/count2 + 1000/(3600*hr + 60*min + sec));
 let hiscore= document.getElementById("highscore");
