@@ -157,13 +157,13 @@ function check() {
 //5 
 function displayScore() {
     score = Math.floor(1000 / count1 + 1000 / (3600 * hr + 60 * min + sec));
-    hs = localStorage.getItem("large");    
+    hs = localStorage.getItem("emHS");    
     if (hs == Infinity) {
         hs = score;
     } else if (score > hs) {
         hs = score;
     } 
-    localStorage.setItem("large", hs);
+    localStorage.setItem("emHS", hs);
     document.getElementById("score").innerHTML = "Your Score: " + score;
     document.getElementById("highscore").innerHTML = "⚡High Score:" + hs;
 }
