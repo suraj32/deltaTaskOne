@@ -177,7 +177,6 @@ function check2(){
         
     }
 }
-//5 high score is not working though everything seems perfect for me.
 function displayScore(){
 let score=Math.floor(1000/count2 + 1000/(3600*hr + 60*min + sec));
 let hiscore= document.getElementById("highscore");
@@ -186,7 +185,7 @@ if(localStorage.getItem("big2") == null){
     console.log('hi1');
     hiscore.innerText = "⚡High Score:" + localStorage.getItem("big2");
 }
-else if(score > localStorage.getItem("big")){
+else if(score > localStorage.getItem("big2")){
     localStorage.setItem("big2",score);
     console.log('hi2');
     hiscore.innerText ="⚡High Score:" +  localStorage.getItem("big2");
