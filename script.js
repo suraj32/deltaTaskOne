@@ -163,18 +163,18 @@ if(tdGroup[25].style.backgroundColor===tdGroup[6].style.backgroundColor){
 function displayScore(){
 let score=Math.floor(1000/count1 + 1000/(3600*hr + 60*min + sec));
 let hiscore= document.getElementById("highscore");
-if(localStorage.getItem("big") == null){
-    localStorage.setItem("big",score);
+if(localStorage.getItem("large") == null){
+    localStorage.setItem("large",score);
     console.log('hi1');
-    hiscore.innerText = "⚡High Score:" + localStorage.getItem("big");
+    hiscore.innerText = "⚡High Score:" + localStorage.getItem("large");
 }
-else if(score > localStorage.getItem("big")){
-    localStorage.setItem("big",score)
+else if(score > localStorage.getItem("large")){
+    localStorage.setItem("large",score)
     console.log('hi2');
-    hiscore.innerText ="⚡High Score:" +  localStorage.getItem("big");
+    hiscore.innerText ="⚡High Score:" +  localStorage.getItem("large");
 }
 else{
     console.log('hi3');
-    hiscore.innerText ="⚡High Score:" +  localStorage.getItem("big");
+    hiscore.innerText ="⚡High Score:" +  localStorage.getItem("large");
 }
 }
