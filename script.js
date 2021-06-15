@@ -158,7 +158,7 @@ if(tdGroup[25].style.backgroundColor===tdGroup[6].style.backgroundColor){
     }
 }
 }
-//5
+//5 high score is not working though everything seems perfect for me
 let score=Math.floor(1000/count1 + 1000/(3600*hr + 60*min + sec));
 let hiscore= document.getElementById("highscore");
 if(localStorage.getItem("big") == null){
